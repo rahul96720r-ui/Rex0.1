@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080b14"><meta name="description" content="REX AI — your personal AI assistant.">
+  <link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css">
+  <title>REX AI</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="REX AI home"><span class="brand-mark">R</span><span>REX<span class="accent">.AI</span><small>PERSONAL INTELLIGENCE</small></span></a>
+      <div class="header-actions"><span class="status"><i></i> READY</span><button id="installBtn" class="icon-btn" hidden title="Install app">⇩</button></div>
+    </header>
+    <section class="welcome" id="welcome">
+      <div class="orb"><span>R</span></div><p class="eyebrow">YOUR AI. YOUR RULES.</p>
+      <h1>What can I help<br><span>you with?</span></h1>
+      <p class="sub">Ask anything. Think clearly. Get things done.</p>
+      <div class="suggestions">
+        <button class="suggestion" data-prompt="Explain a difficult topic in simple Hindi.">✦ <span>Explain a topic</span></button>
+        <button class="suggestion" data-prompt="Help me make a practical study plan for today.">▤ <span>Plan my day</span></button>
+        <button class="suggestion" data-prompt="Give me ideas for a useful personal project.">⌘ <span>Explore ideas</span></button>
+      </div>
+    </section>
+    <section id="chat" class="chat" aria-live="polite"></section>
+    <form id="composer" class="composer">
+      <textarea id="message" rows="1" maxlength="6000" placeholder="Message REX..." aria-label="Message REX"></textarea>
+      <div class="composer-bottom"><span class="hint">REX can make mistakes. Verify important information.</span><div class="tools"><button type="button" id="voiceBtn" class="icon-btn" title="Voice input" aria-label="Voice input">🎙</button><button type="submit" id="sendBtn" class="send-btn" aria-label="Send message">↑</button></div></div>
+    </form>
+    <footer>REX AI <span>•</span> BUILT TO GROW</footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body></html>
