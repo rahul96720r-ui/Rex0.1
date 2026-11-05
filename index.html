@@ -1,33 +1,15 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#080b14"><meta name="description" content="REX AI — your personal AI assistant.">
-  <link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css">
-  <title>REX AI</title>
-</head>
-<body>
-  <main class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="REX AI home"><span class="brand-mark">R</span><span>REX<span class="accent">.AI</span><small>PERSONAL INTELLIGENCE</small></span></a>
-      <div class="header-actions"><span class="status"><i></i> READY</span><button id="installBtn" class="icon-btn" hidden title="Install app">⇩</button></div>
-    </header>
-    <section class="welcome" id="welcome">
-      <div class="orb"><span>R</span></div><p class="eyebrow">YOUR AI. YOUR RULES.</p>
-      <h1>What can I help<br><span>you with?</span></h1>
-      <p class="sub">Ask anything. Think clearly. Get things done.</p>
-      <div class="suggestions">
-        <button class="suggestion" data-prompt="Explain a difficult topic in simple Hindi.">✦ <span>Explain a topic</span></button>
-        <button class="suggestion" data-prompt="Help me make a practical study plan for today.">▤ <span>Plan my day</span></button>
-        <button class="suggestion" data-prompt="Give me ideas for a useful personal project.">⌘ <span>Explore ideas</span></button>
-      </div>
-    </section>
-    <section id="chat" class="chat" aria-live="polite"></section>
-    <form id="composer" class="composer">
-      <textarea id="message" rows="1" maxlength="6000" placeholder="Message REX..." aria-label="Message REX"></textarea>
-      <div class="composer-bottom"><span class="hint">REX can make mistakes. Verify important information.</span><div class="tools"><button type="button" id="voiceBtn" class="icon-btn" title="Voice input" aria-label="Voice input">🎙</button><button type="submit" id="sendBtn" class="send-btn" aria-label="Send message">↑</button></div></div>
-    </form>
-    <footer>REX AI <span>•</span> BUILT TO GROW</footer>
-  </main>
-  <script src="/app.js" defer></script>
-</body></html>
+<html lang="hi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b10"><meta name="description" content="REX AI — आपका व्यक्तिगत AI सहायक">
+<link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css"><title>REX AI</title></head>
+<body><div class="layout">
+<aside class="sidebar" id="sidebar"><div class="side-top"><a class="brand" href="/"><span class="brand-mark">R</span><span>REX<span class="brand-dot">.AI</span></span></a><button class="icon-btn mobile-only" id="closeSidebar">×</button></div>
+<button class="new-chat" id="newChat"><span>＋</span> नई बातचीत</button><div class="side-label">हाल की बातचीत</div><div class="conversation-list" id="conversationList"></div>
+<div class="side-bottom"><div class="profile"><div class="profile-avatar">R</div><div><b>REX AI</b><small>व्यक्तिगत सहायक</small></div><span class="online-dot"></span></div><div class="side-note">आपकी बातचीत इसी डिवाइस पर सेव रहती है।</div></div></aside>
+<div class="scrim" id="scrim"></div><main class="main">
+<header class="topbar"><div class="top-left"><button class="icon-btn menu-btn" id="openSidebar">☰</button><div class="mobile-brand">REX<span>.AI</span></div><div class="model-pill"><span class="pulse"></span> REX सहायक <span class="chevron">⌄</span></div></div><div class="top-actions"><button class="icon-btn" id="clearChat" title="इस बातचीत को मिटाएँ">⌫</button></div></header>
+<section class="workspace"><section class="welcome" id="welcome"><div class="hero-mark"><span>R</span><i></i></div><div class="eyebrow">सोचिए। पूछिए। आगे बढ़िए।</div><h1>आज मैं आपकी<br><span>क्या मदद करूँ?</span></h1><p class="welcome-sub">पढ़ाई, कोडिंग, आइडिया या रोज़मर्रा के सवाल — शुरुआत यहीं से करें।</p>
+<div class="prompt-grid"><button class="prompt-card" data-prompt="मुझे किसी कठिन विषय को आसान हिंदी में समझाओ।"><span class="prompt-icon">✳</span><b>कुछ नया सीखें</b><small>कठिन विषय को आसान भाषा में समझें</small></button><button class="prompt-card" data-prompt="मेरे लिए आज का एक व्यावहारिक पढ़ाई का प्लान बनाओ।"><span class="prompt-icon">▤</span><b>पढ़ाई की योजना</b><small>आज के काम व्यवस्थित करें</small></button><button class="prompt-card" data-prompt="एक उपयोगी वेबसाइट बनाने के लिए कुछ अच्छे आइडिया दो।"><span class="prompt-icon">⌘</span><b>कोडिंग में मदद</b><small>वेबसाइट और प्रोजेक्ट पर काम करें</small></button><button class="prompt-card" data-prompt="मुझे किसी नए प्रोजेक्ट के लिए पाँच अनोखे आइडिया दो।"><span class="prompt-icon">◇</span><b>नए आइडिया</b><small>सोच को नई दिशा दें</small></button></div></section><section class="chat" id="chat" aria-live="polite"></section></section>
+<div class="composer-wrap"><form id="composer" class="composer"><textarea id="message" rows="1" maxlength="6000" placeholder="REX से कुछ भी पूछें..." aria-label="अपना संदेश लिखें"></textarea><div class="composer-bottom"><div class="composer-hint"><span class="spark">✦</span> REX गलतियाँ कर सकता है। ज़रूरी जानकारी जाँच लें।</div><div class="composer-actions"><button type="button" class="tool-btn" id="voiceBtn" title="आवाज़ से लिखें">♩</button><button type="submit" class="send-btn" id="sendBtn" aria-label="भेजें"><span>↑</span></button></div></div></form><footer>REX AI <span>·</span> आपकी मदद के लिए तैयार</footer></div>
+</main></div><div class="toast" id="toast" role="status"></div><script src="/app.js" defer></script></body></html>
